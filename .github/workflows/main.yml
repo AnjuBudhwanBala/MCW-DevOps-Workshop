@@ -12,9 +12,9 @@ on:
   
 env:
   resourcegroup: mcwworkshoprg
-  containerregistry: mcwworkshop.azurecr.io
-  registryusername: mcwworkshop
-  imagename: mcwworkshop.azurecr.io/tailspintoys/web
+  containerregistry: myadvocaycontainerregistry.azurecr.io
+  registryusername: myAdvocaycontainerRegistry
+  imagename: myadvocaycontainerregistry.azurecr.io/tailspintoys/web
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,7 +35,7 @@ jobs:
         with:
           registry: ${{ env.containerregistry }}
           username: ${{ env.registryusername }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+          password: ${{ secrets.MYADVOCAYCONTAINERREGISTRY }}
 
       - name: Build and push
         id: docker_build
