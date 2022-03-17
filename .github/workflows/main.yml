@@ -76,7 +76,7 @@ jobs:
           parameters: 
             environment=dev
             administratorLogin=MySuperAdmin
-            administratorLoginPassword=${{ secrets.DBPASSWORD }}
+            administratorLoginPassword=${{ secrets.DATABASETEST }}
      
       # - name: Deploy ARM template
       #   id: deploy_site
