@@ -9,10 +9,10 @@ on:
     branches: [master]
 
 env:
-  resourcegroup: mcwworkshoprg
-  containerregistry: mcwworkshop.azurecr.io
-  registryusername: mcwworkshop
-  imagename: mcwworkshop.azurecr.io/tailspintoys/web
+  resourcegroup: devops-advocacy-kiro
+  containerregistry: devopsadvocacykiro.azurecr.io
+  registryusername: devopsadvocacykiro
+  imagename: devopsadvocacykiro.azurecr.io/tailspintoys/web
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
