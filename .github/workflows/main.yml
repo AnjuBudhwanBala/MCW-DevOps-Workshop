@@ -115,7 +115,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_SECRET }}
 
       - name: Run ARM deploy
         uses: azure/arm-deploy@v1
@@ -137,7 +137,7 @@ jobs:
                         --resource-group ${{ env.resourcegroup }} \
                         --name ${{ steps.deploy_site.outputs.webappname }} \
                         --docker-custom-image-name ${{ env.imagename }}:${{ github.sha }} \
-                        --docker-registry-server-password ${{ secrets.REGISTRY_PASSWORD }} \
+                        --docker-registry-server-password ${{ secrets.MYADVOCAYCONTAINERREGISTRY }} \
                         --docker-registry-server-url https://${{ env.containerregistry }} \
                         --docker-registry-server-user ${{ env.registryusername }} \
                         --slot staging
