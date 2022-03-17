@@ -163,7 +163,7 @@ jobs:
           parameters: 
             environment=test
             administratorLogin=MySuperAdmin
-            administratorLoginPassword=${{ secrets.DBPASSWORD }}
+            administratorLoginPassword=${{ secrets.DATABASETEST }}
 
       - name: Deploy webapp to staging slot
         uses: azure/CLI@v1
@@ -200,7 +200,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_SECRET }}
 
       - name: Run ARM deploy
         uses: azure/arm-deploy@v1
@@ -212,7 +212,7 @@ jobs:
           parameters: 
             environment=production
             administratorLogin=MySuperAdmin
-            administratorLoginPassword=${{ secrets.DBPASSWORD }}
+            administratorLoginPassword=${{ secrets.DATABASETEST }}
 
       - name: Deploy webapp to staging slot
         uses: azure/CLI@v1
