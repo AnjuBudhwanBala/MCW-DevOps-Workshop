@@ -78,7 +78,7 @@ jobs:
           parameters: 
             environment=dev
             administratorLogin=MySuperAdmin
-            administratorLoginPassword=${{ secrets.DBPASSWORD }}
+            administratorLoginPassword=${{ secrets.DATABASETEST }}
 
       - name: Deploy webapp to staging slot
         uses: azure/CLI@v1
